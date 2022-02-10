@@ -14,7 +14,7 @@ class _DemoEditTextPageState extends State<DemoEditTextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Demo UI - EditText"),
+        title: Text("Demo UI - TextField"),
       ),
       body: Center(
         child: Column(

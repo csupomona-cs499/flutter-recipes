@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_reciples/screens/demo_bottomnavbar_page.dart';
 import 'package:flutter_app_reciples/screens/demo_button_page.dart';
+import 'package:flutter_app_reciples/screens/demo_column_page.dart';
+import 'package:flutter_app_reciples/screens/demo_container_page.dart';
+import 'package:flutter_app_reciples/screens/demo_dropdownbutton_page.dart';
 import 'package:flutter_app_reciples/screens/demo_edittext_page.dart';
+import 'package:flutter_app_reciples/screens/demo_image_page.dart';
+import 'package:flutter_app_reciples/screens/demo_listview_page.dart';
+import 'package:flutter_app_reciples/screens/demo_row_page.dart';
 import 'package:flutter_app_reciples/screens/demo_text_page.dart';
 
 void main() {
@@ -73,8 +80,71 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => DemoEditTextPage()),
                 );
               },
-              child: Text("UI Demo - EditText"),
-            )
+              child: Text("UI Demo - TextField"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoContainerPage()),
+                );
+              },
+              child: Text("UI Demo - Container"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoColumnPage()),
+                );
+              },
+              child: Text("UI Demo - Column"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoRowPage()),
+                );
+              },
+              child: Text("UI Demo - Row"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoImagePage()),
+                );
+              },
+              child: Text("UI Demo - Image"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoListViewPage()),
+                );
+              },
+              child: Text("UI Demo - ListView"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoBottomNavigationBarPage()),
+                );
+              },
+              child: Text("UI Demo - BottomNavigationBar"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DemoDropdownPage()),
+                );
+              },
+              child: Text("UI Demo - Dropdown Button"),
+            ),
           ],
         ),
       ),
