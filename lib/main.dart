@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_reciples/sampe_app/splash_screen.dart';
 import 'package:flutter_app_reciples/screens/demo_bottomnavbar_page.dart';
 import 'package:flutter_app_reciples/screens/demo_button_page.dart';
 import 'package:flutter_app_reciples/screens/demo_column_page.dart';
@@ -144,6 +145,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("UI Demo - Dropdown Button"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SplashScreen()),
+                );
+              },
+              child: Text("App Demo"),
             ),
           ],
         ),
