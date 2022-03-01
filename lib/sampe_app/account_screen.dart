@@ -13,6 +13,12 @@ class _AccountScreenState extends State<AccountScreen> {
   TextEditingController emailController = TextEditingController();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(

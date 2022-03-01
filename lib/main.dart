@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_reciples/network_app/network_home_screen.dart';
 import 'package:flutter_app_reciples/sampe_app/splash_screen.dart';
 import 'package:flutter_app_reciples/screens/demo_bottomnavbar_page.dart';
 import 'package:flutter_app_reciples/screens/demo_button_page.dart';
@@ -154,6 +155,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("App Demo"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NetworkHomeScreen()),
+                );
+              },
+              child: Text("Network App Demo"),
             ),
           ],
         ),
