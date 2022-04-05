@@ -7,12 +7,21 @@ import 'package:flutter_app_reciples/screens/demo_column_page.dart';
 import 'package:flutter_app_reciples/screens/demo_container_page.dart';
 import 'package:flutter_app_reciples/screens/demo_dropdownbutton_page.dart';
 import 'package:flutter_app_reciples/screens/demo_edittext_page.dart';
+import 'package:flutter_app_reciples/screens/demo_firebase_auth.dart';
+import 'package:flutter_app_reciples/screens/demo_firebase_firestore.dart';
+import 'package:flutter_app_reciples/screens/demo_firebase_storage.dart';
 import 'package:flutter_app_reciples/screens/demo_image_page.dart';
 import 'package:flutter_app_reciples/screens/demo_listview_page.dart';
 import 'package:flutter_app_reciples/screens/demo_row_page.dart';
 import 'package:flutter_app_reciples/screens/demo_text_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -54,9 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -165,6 +171,38 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("Network App Demo"),
             ),
+            Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DemoFirebaseAuthPage()),
+                    );
+                  },
+                  child: Text("Firebase Auth"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DemoFirebaseFirestorePage()),
+                    );
+                  },
+                  child: Text("Firestore"),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DemoFirebaseStoragePage()),
+                    );
+                  },
+                  child: Text("Firebase Storage"),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
